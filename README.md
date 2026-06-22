@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SOC Home Lab — Real-Time Threat Detection with Wazuh
 
 ## Overview
@@ -33,3 +34,7 @@ See the /screenshots folder for dashboard and attack evidence.
 ## Author
 Frank Ewasy Odoom Jnr (Pixelz)
 github.com/PixelzJnr
+=======
+# SOC-HomeLab
+A hands-on SOC jome lab Wazuh SIEM, Kali Linux attacker and Ubuntu victim. This lab stimulates real attacks and detects them in real-time
+>>>>>>> 249e7170163826e35b948b36b37f6e7a29430dd4
