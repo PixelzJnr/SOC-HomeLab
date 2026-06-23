@@ -1,32 +1,69 @@
-<svg width="100%" viewBox="0 0 680 520" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 680 580" role="img" xmlns="http://www.w3.org/2000/svg">
 <title>SOC Home Lab Network Diagram</title>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
 </defs>
-<rect x="40" y="160" width="600" height="200" rx="16" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="6 4"/>
-<text font-size="12" x="340" y="185" text-anchor="middle" fill="#888780">Host-only network — 192.168.56.0/24</text>
-<rect x="60" y="210" width="160" height="64" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5"/>
-<text font-size="14" font-weight="500" x="140" y="236" text-anchor="middle" dominant-baseline="central" fill="#993C1D">Kali Linux</text>
-<text font-size="12" x="140" y="256" text-anchor="middle" dominant-baseline="central" fill="#993C1D">192.168.56.30</text>
-<text font-size="12" x="140" y="290" text-anchor="middle" fill="#888780">Attacker</text>
-<rect x="260" y="210" width="160" height="64" rx="8" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
-<text font-size="14" font-weight="500" x="340" y="236" text-anchor="middle" dominant-baseline="central" fill="#0C447C">Ubuntu 22.04</text>
-<text font-size="12" x="340" y="256" text-anchor="middle" dominant-baseline="central" fill="#0C447C">192.168.56.20</text>
-<text font-size="12" x="340" y="290" text-anchor="middle" fill="#888780">Victim + Wazuh agent</text>
-<rect x="460" y="210" width="160" height="64" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
-<text font-size="14" font-weight="500" x="540" y="236" text-anchor="middle" dominant-baseline="central" fill="#085041">Wazuh Server</text>
-<text font-size="12" x="540" y="256" text-anchor="middle" dominant-baseline="central" fill="#085041">192.168.56.101</text>
-<text font-size="12" x="540" y="290" text-anchor="middle" fill="#888780">SIEM + dashboard</text>
-<line x1="222" y1="242" x2="258" y2="242" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text font-size="12" x="240" y="232" text-anchor="middle" fill="#888780">attack</text>
-<line x1="422" y1="242" x2="458" y2="242" stroke="#1D9E75" stroke-width="1.5" marker-end="url(#arrow)"/>
-<text font-size="12" x="440" y="232" text-anchor="middle" fill="#888780">alerts</text>
-<rect x="240" y="430" width="200" height="44" rx="8" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="4 3"/>
-<text font-size="12" x="340" y="456" text-anchor="middle" fill="#888780">NAT — internet access</text>
-<text font-size="14" font-weight="500" x="340" y="50" text-anchor="middle" fill="#2C2C2A">SOC Home Lab — Network Architecture</text>
-<text font-size="12" x="340" y="72" text-anchor="middle" fill="#888780">Frank Ewasy Odoom Jnr (Pixelz) · github.com/PixelzJnr</text>
-<text font-size="12" x="60" y="140" fill="#888780">Tools: Wazuh 4.14.5 · Hydra · Nmap · VirtualBox 7.2 · MITRE ATT&amp;CK</text>
-<text font-size="12" x="60" y="500" fill="#888780">Attacks simulated: Nmap scan, Hydra SSH brute force</text>
+
+<!-- Title -->
+<text font-family="Arial, sans-serif" font-size="16" font-weight="600" x="340" y="38" text-anchor="middle" fill="#2C2C2A">SOC Home Lab — Network Architecture</text>
+<text font-family="Arial, sans-serif" font-size="12" x="340" y="58" text-anchor="middle" fill="#5F5E5A">Frank Ewasy Jnr (Pixelz) · github.com/PixelzJnr</text>
+
+<!-- Tools bar -->
+<rect x="40" y="70" width="600" height="28" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="88" text-anchor="middle" fill="#5F5E5A">Wazuh 4.14.5 · Hydra · Nmap · VirtualBox 7.2 · MITRE ATT&amp;CK</text>
+
+<!-- Host-Only Network container -->
+<rect x="40" y="118" width="600" height="220" rx="16" fill="#F8F8F6" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="6 4"/>
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="138" text-anchor="middle" fill="#5F5E5A">Host-only network — 192.168.56.0/24</text>
+
+<!-- Kali Attacker box -->
+<rect x="62" y="158" width="160" height="72" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+<text font-family="Arial, sans-serif" font-size="14" font-weight="600" x="142" y="185" text-anchor="middle" fill="#712B13">Kali Linux</text>
+<text font-family="Arial, sans-serif" font-size="11" x="142" y="204" text-anchor="middle" fill="#993C1D">192.168.56.30</text>
+<text font-family="Arial, sans-serif" font-size="10" x="142" y="218" text-anchor="middle" fill="#D85A30">Attacker</text>
+
+<!-- Ubuntu Victim box -->
+<rect x="260" y="158" width="160" height="72" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text font-family="Arial, sans-serif" font-size="14" font-weight="600" x="340" y="185" text-anchor="middle" fill="#0C447C">Ubuntu 22.04</text>
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="204" text-anchor="middle" fill="#185FA5">192.168.56.20</text>
+<text font-family="Arial, sans-serif" font-size="10" x="340" y="218" text-anchor="middle" fill="#185FA5">Victim + Wazuh agent</text>
+
+<!-- Wazuh Server box -->
+<rect x="458" y="158" width="160" height="72" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+<text font-family="Arial, sans-serif" font-size="14" font-weight="600" x="538" y="185" text-anchor="middle" fill="#085041">Wazuh Server</text>
+<text font-family="Arial, sans-serif" font-size="11" x="538" y="204" text-anchor="middle" fill="#0F6E56">192.168.56.101</text>
+<text font-family="Arial, sans-serif" font-size="10" x="538" y="218" text-anchor="middle" fill="#0F6E56">SIEM + dashboard</text>
+
+<!-- Arrow: Kali to Victim (attack) -->
+<line x1="224" y1="194" x2="258" y2="194" stroke="#D85A30" stroke-width="2" marker-end="url(#arrow)"/>
+<text font-family="Arial, sans-serif" font-size="10" x="241" y="188" text-anchor="middle" fill="#D85A30">attack</text>
+
+<!-- Arrow: Victim to Wazuh (alerts) -->
+<line x1="422" y1="194" x2="456" y2="194" stroke="#0F6E56" stroke-width="2" marker-end="url(#arrow)"/>
+<text font-family="Arial, sans-serif" font-size="10" x="439" y="188" text-anchor="middle" fill="#0F6E56">alerts</text>
+
+<!-- NAT box -->
+<rect x="240" y="440" width="200" height="50" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
+<text font-family="Arial, sans-serif" font-size="13" font-weight="600" x="340" y="461" text-anchor="middle" fill="#0C447C">NAT</text>
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="479" text-anchor="middle" fill="#185FA5">Internet access</text>
+
+<!-- Arrow: Kali down to NAT -->
+<line x1="142" y1="232" x2="142" y2="390" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+<line x1="142" y1="390" x2="268" y2="440" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+
+<!-- Arrow: Ubuntu down to NAT -->
+<line x1="340" y1="232" x2="340" y2="438" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+
+<!-- Arrow: Wazuh down to NAT -->
+<line x1="538" y1="232" x2="538" y2="390" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+<line x1="538" y1="390" x2="412" y2="440" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+
+<!-- Attacks simulated label -->
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="530" text-anchor="middle" fill="#5F5E5A">Attacks simulated: Nmap network scan · Hydra SSH brute force (14M passwords)</text>
+<text font-family="Arial, sans-serif" font-size="11" x="340" y="548" text-anchor="middle" fill="#5F5E5A">Detections: 538 medium · 1,657 low severity alerts · MITRE ATT&amp;CK mapped</text>
 </svg>
